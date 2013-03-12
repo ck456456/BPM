@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+BODY
+{
+    FONT-SIZE: 9pt;
+    COLOR: navy;
+	LINE-HEIGHT: 25px;
+    FONT-FAMILY: 新細明體;
+    BACKGROUND-COLOR: whitesmoke
+}
+A
+{
+    CURSOR: hand;
+    COLOR: indigo;
+    LINE-HEIGHT: 14px;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: orchid;
+    TEXT-DECORATION: underline
+}

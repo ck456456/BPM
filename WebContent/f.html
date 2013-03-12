@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Flexigrid</title>
+	<link rel="Stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="js/flexigrid/flexigrid.pack.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/flexigrid/flexigrid.pack.js"></script>
+</head>
+<body>
+	<h2>Example 1</h2>
+	<p>
+		The most basic example with the zero configuration, with a table
+		converted into flexigrid (<a href="#"
+			onclick="$(this).parent().next().toggle(); return false;">Show
+			sample code</a>)
+	</p>
+	<div class="code">
+		<pre>$('.flexme').flexigrid();</pre>
+	</div>
+	<table class="flexme1">
+		<thead>
+			<tr>
+				<th width="100">Col 1</th>
+				<th width="100">Col 2</th>
+				<th width="100">Col 3 is a long header name</th>
+				<th width="300">Col 4</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>This is data 1 with overflowing content</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Example 2</h2>
+	<p>
+		Table converted into flexigrid with height, and width set to auto,
+		stripes remove. (<a href="#"
+			onclick="$(this).parent().next().toggle(); return false;">Show
+			sample code</a>)
+	</p>
+	<div class="code">
+		<pre>$('.flexme2').flexigrid({height:'auto',striped:false});</pre>
+	</div>
+	<table class="flexme2">
+		<thead>
+			<tr>
+				<th width="100">Col 1</th>
+				<th width="100">Col 2</th>
+				<th width="100">Col 3 is a long header name</th>
+				<th width="300">Col 4</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>This is data 1 with overflowing content</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+			<tr>
+				<td>This is data 1</td>
+				<td>This is data 2</td>
+				<td>This is data 3</td>
+				<td>This is data 4</td>
+			</tr>
+		</tbody>
+	</table>
+	
+<table class="flexme1">
+<thead>
+<tr>
+<th width="1000">組群</th>
+<th width="10">姓名</th>
+<th width="10">密碼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admin     </td>
+<td>kc        </td>
+<td>0916432436</td>
+</tr>
+</tbody>
+</table>
+	
+	<script type="text/javascript">
+		$('.flexme1').flexigrid();
+		$('.flexme2').flexigrid({
+			height : 'auto',
+			striped : false
+		});
+		function test(com, grid) {
+			if (com == 'Delete') {
+				confirm('Delete ' + $('.trSelected', grid).length + ' items?')
+			} else if (com == 'Add') {
+				alert('Add New Item');
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>    
+	<package name="s2_action" extends="struts-default">
+	
+		<action name="Error" class="Error">
+	        <result name="error"	>/error.jsp	</result>
+		</action>
+		<action name="Default" class="Default">
+	        <result name="again"	>/sys/header.jsp	</result>
+	        <result name="success"	>/sys/header.jsp	</result>
+	        <result name="nouser"	>/err00.jsp	</result>
+	        
+		</action>
+		
+		<action name="Property" class="Property">
+	        <result name="Prop"	>/bpm/BPM_Prop.jsp			</result> <!-- 表 單 屬 性 -->
+	        <result name="Atta"	>/bpm/BPM_Atta.jsp			</result> <!-- 表 單 附 件 -->
+	        <result name="TreeFlow"	>/bpm/BPM_TreeFlow.jsp	</result> <!-- 表 單 流 程 -->
+		</action>
+		<action name="Manager" class="Manager">
+	        <result name="BPMF01"	>/bpm/BPMF01v01.jsp	</result> <!-- 部門人員組織圖 -->  
+	        <result name="BPMF02"	>/bpm/BPMF02v01.jsp	</result> <!-- 人 員 權 限 設 定 -->
+	        <result name="BPMF02v02">/bpm/BPMF02v02.jsp	</result> <!-- 設 定 表 單 代 理 人  -->
+	        <result name="BPMF03"	>/bpm/BPMF03v01.jsp	</result> <!-- 表 單 初 始 定 義 -->
+	        <result name="BPMF04"	>/bpm/BPMF04v01.jsp	</result> <!-- 待 處 理 表 單 --> 
+	        <result name="BPMF04v02">/bpm/BPMF04v02.jsp	</result> <!-- 開 立 未 完 成 表 單 -->
+	        <result name="BPMF04v03">/bpm/BPMF04v03.jsp	</result> <!-- 表 單 查 詢 -->
+	        <result name="BPMF07"	>/bpm/BPMF07v01.jsp	</result> <!-- 流程群組設定 -->
+	        <result name="BPMF09"	>/bpm/BPMF09v01.jsp	</result> <!-- 權 限 群 組 設 定 -->
+	        <result name="blank"	>/sys/blank.jsp	</result>
+		</action>
+		
+		<action name="WorkFlow" class="WorkFlow">
+	        <result name="blank"	>/sys/blank.jsp		</result>
+	        <result name="main"	    >/form/form000.jsp	</result> <!-- 表單入口 -->
+		</action>
+		
+		<action name="ASYS01" class="tw.com.prodisc.bpm.action.ASYS01">
+	        <result name="SYSF01"	>/sys/SYSF01v01.jsp	</result> <!-- 選單資料維護 -->
+		</action>
+	</package>
+</struts>    
+	

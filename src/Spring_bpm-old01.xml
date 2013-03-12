@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="dao" class="tw.com.prodisc.bpm.dao.DaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="SYSF01" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"
+			ref="hibernateTransactionManager">
+		</property>
+		<property name="target">
+			<bean
+				class="tw.com.prodisc.bpm.service.impl.SImplSYSF01">
+				<property name="dao" ref="dao"></property>
+			</bean>
+		</property>
+		<property name="transactionAttributeSource"
+			ref="hibernateTransactionAttributeSource">
+		</property>
+	</bean>
+	<bean id="BPMF01" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"
+			ref="hibernateTransactionManager">
+		</property>
+		<property name="target">
+			<bean
+				class="tw.com.prodisc.bpm.service.impl.SImplBPMF01">
+				<property name="dao" ref="dao"></property>
+			</bean>
+		</property>
+		<property name="transactionAttributeSource"
+			ref="hibernateTransactionAttributeSource">
+		</property>
+	</bean>
+	<bean id="BPMF02" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"
+			ref="hibernateTransactionManager">
+		</property>
+		<property name="target">
+			<bean
+				class="tw.com.prodisc.bpm.service.impl.SImplBPMF02">
+				<property name="dao" ref="dao"></property>
+			</bean>
+		</property>
+		<property name="transactionAttributeSource"
+			ref="hibernateTransactionAttributeSource">
+		</property>
+	</bean>
+	<bean id="BPMF03" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"
+			ref="hibernateTransactionManager">
+		</property>
+		<property name="target">
+			<bean
+				class="tw.com.prodisc.bpm.service.impl.SImplBPMF03">
+				<property name="dao" ref="dao"></property>
+			</bean>
+		</property>
+		<property name="transactionAttributeSource"
+			ref="hibernateTransactionAttributeSource">
+		</property>
+	</bean>
+	<bean id="BPMF07" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"
+			ref="hibernateTransactionManager">
+		</property>
+		<property name="target">
+			<bean
+				class="tw.com.prodisc.bpm.service.impl.SImplBPMF07">
+				<property name="dao" ref="dao"></property>
+			</bean>
+		</property>
+		<property name="transactionAttributeSource"
+			ref="hibernateTransactionAttributeSource">
+		</property>
+	</bean>
+	<bean id="BPMF09" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager"
+			ref="hibernateTransactionManager">
+		</property>
+		<property name="target">
+			<bean
+				class="tw.com.prodisc.bpm.service.impl.SImplBPMF09">
+				<property name="dao" ref="dao"></property>
+			</bean>
+		</property>
+		<property name="transactionAttributeSource"
+			ref="hibernateTransactionAttributeSource">
+		</property>
+	</bean>
+	
+	<bean id="JSYSF01" scope="prototype" class="tw.com.prodisc.bpm.json.JSYSF01">
+	    <property name="S_SYSF01">       
+	       <ref bean="SYSF01"/>
+	    </property>
+    </bean>
+	<bean id="JBPMF01" scope="prototype" class="tw.com.prodisc.bpm.json.JBPMF01">
+	    <property name="S_BPMF01">       
+	       <ref bean="BPMF01"/>
+	    </property>
+    </bean>
+	<bean id="JBPMF02" scope="prototype" class="tw.com.prodisc.bpm.json.JBPMF02">
+	    <property name="S_BPMF01">       
+	       <ref bean="BPMF01"/>
+	    </property>
+	    <property name="S_BPMF02">       
+	       <ref bean="BPMF02"/>
+	    </property>
+	    <property name="S_BPMF09">       
+	       <ref bean="BPMF09"/>
+	    </property>
+    </bean>
+	<bean id="JBPMF03" scope="prototype" class="tw.com.prodisc.bpm.json.JBPMF03">
+	    <property name="S_BPMF03">       
+	       <ref bean="BPMF03"/>
+	    </property>
+    </bean>
+	<bean id="JBPMF07" scope="prototype" class="tw.com.prodisc.bpm.json.JBPMF07">
+	    <property name="S_BPMF02">       
+	       <ref bean="BPMF02"/>
+	    </property>
+	    <property name="S_BPMF07">       
+	       <ref bean="BPMF07"/>
+	    </property>
+    </bean>
+	<bean id="JBPMF09" scope="prototype" class="tw.com.prodisc.bpm.json.JBPMF09">
+	    <property name="S_SYSF01">       
+	       <ref bean="SYSF01"/>
+	    </property>
+	    <property name="S_BPMF09">       
+	       <ref bean="BPMF09"/>
+	    </property>
+    </bean>
+    
+	<bean id="Default" scope="prototype" class="tw.com.prodisc.bpm.action.Default">
+	    <property name="S_SYSF01">       
+	       <ref bean="SYSF01"/>
+	    </property>
+	    <property name="S_BPMF02">       
+	       <ref bean="BPMF02"/>
+	    </property>
+	    <property name="S_BPMF09">       
+	       <ref bean="BPMF09"/>
+	    </property>
+    </bean>    
+	<bean id="WorkFlow" scope="prototype" class="tw.com.prodisc.bpm.action.WorkFlow">
+    </bean>
+	<bean id="Manager" scope="prototype" class="tw.com.prodisc.bpm.action.Manager">
+    </bean>
+	<bean id="Error" scope="prototype" class="tw.com.prodisc.bpm.action.Error">
+    </bean>
+	<bean id="Property" scope="prototype" class="tw.com.prodisc.bpm.action.Property">
+	    <property name="S_BPMF03">       
+	       <ref bean="BPMF03"/>
+	    </property>
+    </bean>
+</beans>

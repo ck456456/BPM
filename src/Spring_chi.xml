@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="chi_dao" class="tw.com.prodisc.bpm.dao.Chi_DaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="chi_sessionFactory"></property>
+	</bean>
+
+	<bean id="CHI_PUB" scope="prototype" class="tw.com.prodisc.bpm.json.CHI_PUB">
+	    <property name="chi_dao">       
+	       <ref bean="chi_dao"/>
+	    </property>
+    </bean>
+	<bean id="JChiBox" scope="prototype" class="tw.com.prodisc.bpm.json.JChiBox">
+	    <property name="chi_dao">       
+	       <ref bean="chi_dao"/>
+	    </property>
+    </bean>
+</beans>
